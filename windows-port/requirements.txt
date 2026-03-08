@@ -9,6 +9,6 @@ httpx>=0.27.0
 Pillow>=10.0.0
 
 # Windows-specific dependencies
-# pywebview has different backends for Windows:
-# - For WebView2 (Windows 10+): No additional dependencies needed
-# - For older Windows: Install WebKit2 via the installer
+# pythonnet must be installed BEFORE pywebview to avoid build errors
+pythonnet>=3.0.0
+# Install with: pip install --prefer-binary pythonnet
