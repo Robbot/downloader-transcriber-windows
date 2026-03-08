@@ -69,7 +69,35 @@ Output: `dist/Copysight.exe` (standalone, no Python required)
 
 - Windows 10/11
 - Python 3.11 or 3.12 (download from [python.org](https://www.python.org/downloads/))
+- **FFmpeg** (required for audio processing)
 - Optional: NVIDIA GPU with CUDA for faster transcription
+
+#### Installing FFmpeg on Windows
+
+**Option 1: Using Chocolatey (recommended)**
+```powershell
+choco install ffmpeg
+```
+
+**Option 2: Manual download**
+
+1. Download FFmpeg: https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip
+2. Extract to `C:\ffmpeg`
+3. Add to PATH:
+   - Press Win+R, type `sysdm.cpl`, Enter
+   - Go to Advanced → Environment Variables
+   - Under "System variables", find `Path`, click Edit
+   - Add `C:\ffmpeg\bin`
+   - Click OK on all dialogs
+4. Restart your terminal and verify:
+   ```powershell
+   ffmpeg -version
+   ffprobe -version
+   ```
+
+**Option 3: Using the install script**
+
+Run `install.bat` which will automatically download FFmpeg if not found.
 
 #### Check Your Python Version
 
