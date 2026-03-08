@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+test_venv/
+
+# Copysight specific - all variants
+downloads/
+transcripts/
+analyses/
+settings.json
+.env
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large binary files
+*.mp3
+*.wav
+*.mp4
+*.avi
