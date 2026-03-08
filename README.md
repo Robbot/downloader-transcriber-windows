@@ -61,7 +61,7 @@ Output: `dist/Copysight.exe` (standalone, no Python required)
 
 ## Requirements
 
-- **Python 3.11 or 3.12** (3.14 is not supported — packages lack pre-built wheels)
+- **Python 3.11 or 3.12** (3.14 is NOT supported — packages lack pre-built wheels)
 - OpenRouter API key (for AI analysis)
 - FFmpeg (for audio processing)
 
@@ -70,6 +70,26 @@ Output: `dist/Copysight.exe` (standalone, no Python required)
 - Windows 10/11
 - Python 3.11 or 3.12 (download from [python.org](https://www.python.org/downloads/))
 - Optional: NVIDIA GPU with CUDA for faster transcription
+
+#### Check Your Python Version
+
+Before installing, verify your Python version:
+
+```powershell
+# Method 1: If python is in PATH
+python --version
+
+# Method 2: Check all installed Python versions
+py --list
+
+# Method 3: Python Launcher
+py -3.12 --version
+py -3.11 --version
+```
+
+**Important:** If you see `Python 3.14.x`, you must install Python 3.11 or 3.12. Python 3.14 is experimental and dependencies will fail to install.
+
+Download Python 3.12: https://www.python.org/downloads/release/python-3128/ (choose "Windows installer (64-bit)" and check "Add to PATH")
 
 ### Linux/macOS (Cross-platform)
 
