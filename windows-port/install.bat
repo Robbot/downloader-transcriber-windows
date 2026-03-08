@@ -44,9 +44,14 @@ REM Upgrade pip
 echo Upgrading pip...
 python -m pip install --upgrade pip
 
-REM Install dependencies
+REM Install pywebview without dependencies (avoids pythonnet build)
 echo.
-echo Installing dependencies...
+echo Installing pywebview (without dependencies)...
+pip install pywebview --no-deps
+
+REM Install remaining dependencies
+echo.
+echo Installing remaining dependencies...
 pip install -r requirements.txt
 if errorlevel 1 (
     echo.

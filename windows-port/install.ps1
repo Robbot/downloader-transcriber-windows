@@ -48,9 +48,14 @@ Write-Host ""
 Write-Host "Upgrading pip..." -ForegroundColor Yellow
 python -m pip install --upgrade pip
 
-# Install dependencies
+# Install pywebview without dependencies (avoids pythonnet build)
 Write-Host ""
-Write-Host "Installing dependencies..." -ForegroundColor Yellow
+Write-Host "Installing pywebview (without dependencies)..." -ForegroundColor Yellow
+pip install pywebview --no-deps
+
+# Install remaining dependencies
+Write-Host ""
+Write-Host "Installing remaining dependencies..." -ForegroundColor Yellow
 pip install -r requirements.txt
 if ($LASTEXITCODE -ne 0) {
     Write-Host ""
