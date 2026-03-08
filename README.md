@@ -61,18 +61,19 @@ Output: `dist/Copysight.exe` (standalone, no Python required)
 
 ## Requirements
 
-- Python 3.10+
+- **Python 3.11 or 3.12** (3.14 is not supported — packages lack pre-built wheels)
 - OpenRouter API key (for AI analysis)
 - FFmpeg (for audio processing)
 
 ### Windows
 
 - Windows 10/11
+- Python 3.11 or 3.12 (download from [python.org](https://www.python.org/downloads/))
 - Optional: NVIDIA GPU with CUDA for faster transcription
 
 ### Linux/macOS (Cross-platform)
 
-- Python 3.10+
+- Python 3.11 or 3.12
 - Optional: CUDA for GPU acceleration
 
 ## Architecture
