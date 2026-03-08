@@ -1,5 +1,6 @@
 # Runtime
-pywebview>=5.0
+# Use CEF backend to avoid pythonnet dependency on Windows
+pywebview[cef]>=5.0
 yt-dlp>=2025.1.0
 faster-whisper>=1.0.0
 openai>=1.0.0
@@ -7,6 +8,3 @@ httpx>=0.27.0
 
 # Build (icon generation)
 Pillow>=10.0.0
-
-# Windows: WebView2 is built into Windows 10/11 (no extra deps needed)
-# If on older Windows or WebView2 missing: https://developer.microsoft.com/microsoft-edge/webview2/
