@@ -48,14 +48,9 @@ Write-Host ""
 Write-Host "Upgrading pip..." -ForegroundColor Yellow
 python -m pip install --upgrade pip
 
-# Install pythonnet first (must be before pywebview to avoid build errors)
+# Install dependencies
 Write-Host ""
-Write-Host "Installing pythonnet (pre-built wheel)..." -ForegroundColor Yellow
-pip install --prefer-binary pythonnet
-
-# Install remaining dependencies
-Write-Host ""
-Write-Host "Installing remaining dependencies..." -ForegroundColor Yellow
+Write-Host "Installing dependencies..." -ForegroundColor Yellow
 pip install -r requirements.txt
 if ($LASTEXITCODE -ne 0) {
     Write-Host ""

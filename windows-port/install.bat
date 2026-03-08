@@ -44,14 +44,9 @@ REM Upgrade pip
 echo Upgrading pip...
 python -m pip install --upgrade pip
 
-REM Install pythonnet first (must be before pywebview to avoid build errors)
+REM Install dependencies
 echo.
-echo Installing pythonnet (pre-built wheel)...
-pip install --prefer-binary pythonnet
-
-REM Install remaining dependencies
-echo.
-echo Installing remaining dependencies...
+echo Installing dependencies...
 pip install -r requirements.txt
 if errorlevel 1 (
     echo.
